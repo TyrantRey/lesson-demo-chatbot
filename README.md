@@ -5,6 +5,7 @@ A simple conversational chatbot powered by [LangChain](https://www.langchain.com
 ## Features
 
 - Interactive terminal chat with conversation history
+- **Gradio web UI** with drag-and-drop file upload
 - Powered by `gemini-2.5-flash` via the Google Generative AI API
 - Configuration managed through environment variables using **pydantic-settings**
 - Packaged with [uv](https://docs.astral.sh/uv/) for fast, reproducible dependency management
@@ -40,17 +41,36 @@ GOOGLE_API_KEY=your-api-key-here
 
 ### 4. Run the chatbot
 
+**Terminal UI:**
+
 ```bash
 uv run chatbot
 ```
 
-You'll see:
+**Web UI (Gradio):**
+
+```bash
+uv run chatbot-web
+```
+
+This opens a browser at `http://localhost:7860` where you can chat and drag-and-drop images or PDFs.
+
+### Multimodal Commands
+
+| Command | Description |
+|---|---|
+| `/image <path> [prompt]` | Send a local image (png, jpg, gif, webp, bmp) with an optional prompt |
+| `/pdf <path> [prompt]` | Send a local PDF with an optional prompt |
+| `/reset` | Clear conversation history |
+| `/help` | Show available commands |
+
+**Examples:**
 
 ```
-🤖 Chatbot ready! Type 'quit' or 'exit' to stop.
+You: /image photo.png What is in this photo?
+You: /pdf report.pdf Summarise the key findings
+You: /image "C:\Users\me\My Photos\cat.jpg"
 ```
-
-Type a message and press Enter to chat. Type `quit` or `exit` to end the session.
 
 ## Project Structure
 
@@ -58,9 +78,11 @@ Type a message and press Enter to chat. Type `quit` or `exit` to end the session
 chatbot/
 ├── src/chatbot/
 │   ├── __init__.py
-│   ├── config.py      # Settings loaded from .env via pydantic-settings
-│   └── main.py         # Chat loop & LangChain integration
-├── .env                 # API key (not committed)
+│   ├── config.py        # Settings loaded from .env via pydantic-settings
+│   ├── main.py           # Terminal chat loop with slash-command router
+│   ├── multimodal.py     # MultimodalChatbot class (text, image, PDF)
+│   └── webui.py          # Gradio web interface
+├── .env                   # API key (not committed)
 ├── .gitignore
 ├── pyproject.toml
 ├── uv.lock

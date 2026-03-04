@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "gradio>=5.23.1",
     "langchain>=1.2.10",
     "langchain-google-genai>=4.2.1",
     "pydantic-settings>=2.13.1",
@@ -12,6 +13,7 @@ dependencies = [
 
 [project.scripts]
 chatbot = "chatbot.main:main"
+chatbot-web = "chatbot.webui:main"
 
 [build-system]
 requires = ["uv_build>=0.10.8"]
