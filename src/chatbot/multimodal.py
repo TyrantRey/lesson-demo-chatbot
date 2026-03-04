@@ -25,10 +25,6 @@ class MultimodalChatbot:
             self._system_message
         ]
 
-    # ------------------------------------------------------------------
-    # Public API
-    # ------------------------------------------------------------------
-
     def send_text(self, text: str) -> str:
         """Send a plain text message and return the assistant's reply."""
         message = HumanMessage(content=text)
@@ -66,9 +62,19 @@ class MultimodalChatbot:
         """Clear conversation history, keeping only the system message."""
         self.history = [self._system_message]
 
-    # ------------------------------------------------------------------
-    # Internals
-    # ------------------------------------------------------------------
+    @property
+    def system_prompt(self) -> str:
+        """Return the current system prompt text."""
+        return str(self._system_message.content)
+
+    def set_system_prompt(self, prompt: str) -> None:
+        """Update the system prompt and reset conversation history.
+
+        The new prompt takes effect immediately. Conversation history is
+        cleared because prior messages were generated under the old prompt.
+        """
+        self._system_message = SystemMessage(content=prompt)
+        self.history = [self._system_message]
 
     def _invoke(self, message: HumanMessage) -> str:
         self.history.append(message)
