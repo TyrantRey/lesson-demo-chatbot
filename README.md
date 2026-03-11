@@ -73,6 +73,6 @@ GEMINI_API_KEY=your_api_key_here
 ## GitHub 專案連結
 
 - 組員2：https://github.com/LUKEYAU/aiAgent.git
-- 組員3：劉嘉鎔
+- 組員3：劉嘉鎔 https://github.com/jessiliu0912-collab/0311.git
 - 組員4：https://github.com/Pang-Yiyi/chatbot.git
 - 組員5：何平
