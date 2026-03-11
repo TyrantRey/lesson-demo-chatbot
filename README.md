@@ -7,7 +7,7 @@
 - 組員2：D1130836 邱家悅
 - 組員3：D1138381 劉嘉鎔
 - 組員4：D1245810 龎靚伊
-- 組員5：何平
+- 組員5：M1497119 何平
 
 ## 專案簡介
 
@@ -67,6 +67,13 @@ GEMINI_API_KEY=your_api_key_here
 > 請簡要寫出本次作業的學習心得。
 邱家悅 : Git 版本控制上有了更深刻的實戰體會，如果沒有良好的 Git 版本控制，改壞後很難回復，多人協作時也容易互相覆蓋程式碼 
 龎靚伊：透過本次專案，我們學習了如何整合大型語言模型（LLM）與實際應用系統，並理解 AI 聊天機器人的基本架構。在實作過程中，我們熟悉了LangChain、Google Gemini API、Gradio Web UI等工具，並了解如何透過環境變數管理 API Key，以提升系統安全性。此外，本專案也讓我們理解多模態 AI 應用（Multimodal AI）的基本概念，例如讓 AI 同時處理文字、圖片與文件等不同類型資料。
+何平：
+透過這次課程，我學到了版本控制與團隊協作的重要性。使用 Git 可以記錄每次程式修改的內容，像是透過 `git add` 與 `git commit` 來保存版本，讓開發過程更加有條理，也方便在出現問題時回到之前的版本。
+
+此外，我也了解如何將專案上傳到 GitHub，並學習遠端儲存庫與協作開發的概念。透過 GitHub，團隊成員可以共同管理程式碼，提升開發效率。
+
+同時，課程也讓我了解到資訊安全的重要性，例如 API key 應該放在 `.env` 檔案中，並透過 `.gitignore` 避免上傳到 GitHub。整體來說，這次的學習讓我更了解專案管理與協作開發的基本方式，對未來的程式開發很有幫助。
+
 
 ---
 
@@ -75,4 +82,4 @@ GEMINI_API_KEY=your_api_key_here
 - 組員2：https://github.com/LUKEYAU/aiAgent.git
 - 組員3：劉嘉鎔 https://github.com/jessiliu0912-collab/0311.git
 - 組員4：https://github.com/Pang-Yiyi/chatbot.git
-- 組員5：何平
+- 組員5：https://github.com/pann200011-byte/chatbot
