@@ -1,108 +1,72 @@
-# 🤖 Chatbot
+# AI Chatbot 專案名稱
 
-A simple conversational chatbot powered by [LangChain](https://www.langchain.com/) and Google's **Gemini 2.5 Flash** model.
+## 小組：
 
-## Features
+### 組員：
 
-- Interactive terminal chat with conversation history
-- **Gradio web UI** with drag-and-drop file upload
-- Powered by `gemini-2.5-flash` via the Google Generative AI API
-- Configuration managed through environment variables using **pydantic-settings**
-- Packaged with [uv](https://docs.astral.sh/uv/) for fast, reproducible dependency management
+* D1130836 邱家悅
+* 組員2
 
-## Prerequisites
+## 專案簡介
 
-- **Python 3.12+**
-- **uv** — install it from [docs.astral.sh/uv](https://docs.astral.sh/uv/)
-- A **Google AI API key** — get one at [aistudio.google.com](https://aistudio.google.com/)
+請簡要說明本專案的用途。
+本專案是一個基於 Google Gemini 2.5 Flash 模型開發的多模態 AI 聊天機器人。有別於基礎的單一介面，本專案支援「Gradio Web UI」介面。專案導入了現代化的 Python 套件管理器 uv 確保環境的一致性，並具備讀取與解析圖片、PDF 等多模態檔案的能力。
 
-## Getting Started
 
-### 1. Clone the repository
+## 目前功能
+
+* 雙軌互動介面：支援終端機指令互動與包含拖曳上傳功能的 Gradio 網頁圖形介面。
+
+* 多模態檔案解析：支援透過 /image 與 /pdf 指令（或網頁端直接上傳）讓 AI 讀取並分析圖片與 PDF 內容。
+
+* 對話記憶持久化：具備多輪對話的上下文記憶能力。
+
+* 嚴謹的專案設定管理：使用 pydantic-settings 動態載入並管理環境變數。
+
+## 執行方式
+
+1. 下載專案
+2. 
+
+範例指令：
 
 ```bash
-git clone <repo-url>
-cd chatbot
+git clone 你的專案網址
 ```
 
-### 2. Install dependencies
+---
 
-```bash
-uv sync
-```
+## 環境變數說明
 
-### 3. Set up your API key
+請自行建立 `.env` 檔案，並填入自己的 API key。
 
-Create a `.env` file in the project root:
+範例：
 
 ```env
-GOOGLE_API_KEY=your-api-key-here
+GEMINI_API_KEY=your_api_key_here
 ```
 
-### 4. Run the chatbot
+## 遇到的問題與解法
 
-**Terminal UI:**
+### 問題 1
 
-```bash
-uv run chatbot
-```
+問題：
+解法：
 
-**Web UI (Gradio):**
+### 問題 2
 
-```bash
-uv run chatbot-web
-```
+問題：
+解法：
 
-This opens a browser at `http://localhost:7860` where you can chat and drag-and-drop images or PDFs.
+---
 
-### Multimodal Commands
+## 學習心得
 
-| Command | Description |
-|---|---|
-| `/image <path> [prompt]` | Send a local image (png, jpg, gif, webp, bmp) with an optional prompt |
-| `/pdf <path> [prompt]` | Send a local PDF with an optional prompt |
-| `/reset` | Clear conversation history |
-| `/help` | Show available commands |
+> 請簡要寫出本次作業的學習心得。
+邱家悅 : Git 版本控制上有了更深刻的實戰體會，如果沒有良好的 Git 版本控制，改壞後很難回復，多人協作時也容易互相覆蓋程式碼 
 
-**Examples:**
+---
 
-```
-You: /image photo.png What is in this photo?
-You: /pdf report.pdf Summarise the key findings
-You: /image "C:\Users\me\My Photos\cat.jpg"
-```
+## GitHub 專案連結
 
-## Project Structure
-
-```
-chatbot/
-├── src/chatbot/
-│   ├── __init__.py
-│   ├── config.py        # Settings loaded from .env via pydantic-settings
-│   ├── main.py           # Terminal chat loop with slash-command router
-│   ├── multimodal.py     # MultimodalChatbot class (text, image, PDF)
-│   └── webui.py          # Gradio web interface
-├── .env                   # API key (not committed)
-├── .gitignore
-├── pyproject.toml
-├── uv.lock
-└── README.md
-```
-
-## Development
-
-Install dev dependencies (includes **ruff** for linting and **ty** for type-checking):
-
-```bash
-uv sync --group dev
-```
-
-Lint:
-
-```bash
-uv run ruff check .
-```
-
-## License
-
-This project is unlicensed — use it however you like.
+https://github.com/LUKEYAU/aiAgent.git
