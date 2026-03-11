@@ -3,9 +3,11 @@
 ## 小組：
 
 ### 組員：
-
-* D1130836 邱家悅
-* 組員2
+- 組員1：張紹謙
+- 組員2：D1130836 邱家悅
+- 組員3：劉嘉鎔
+- 組員4：D1245810 龎靚伊
+- 組員5：何平
 
 ## 專案簡介
 
@@ -50,13 +52,13 @@ GEMINI_API_KEY=your_api_key_here
 
 ### 問題 1
 
-問題：
-解法：
+問題：部分套件版本衝突，導致安裝依賴套件時出現錯誤。
+解法：使用 uv 管理專案依賴，透過 uv.lock 鎖定套件版本，使開發環境可以保持一致。
 
 ### 問題 2
 
-問題：
-解法：
+問題：AI 無法正確讀取圖片或 PDF。
+解法：將不同輸入（文字 / 圖片 / PDF）導向不同的處理函式。
 
 ---
 
@@ -64,9 +66,13 @@ GEMINI_API_KEY=your_api_key_here
 
 > 請簡要寫出本次作業的學習心得。
 邱家悅 : Git 版本控制上有了更深刻的實戰體會，如果沒有良好的 Git 版本控制，改壞後很難回復，多人協作時也容易互相覆蓋程式碼 
+龎靚伊：透過本次專案，我們學習了如何整合大型語言模型（LLM）與實際應用系統，並理解 AI 聊天機器人的基本架構。在實作過程中，我們熟悉了LangChain、Google Gemini API、Gradio Web UI等工具，並了解如何透過環境變數管理 API Key，以提升系統安全性。此外，本專案也讓我們理解多模態 AI 應用（Multimodal AI）的基本概念，例如讓 AI 同時處理文字、圖片與文件等不同類型資料。
 
 ---
 
 ## GitHub 專案連結
 
-https://github.com/LUKEYAU/aiAgent.git
+- 組員2：https://github.com/LUKEYAU/aiAgent.git
+- 組員3：劉嘉鎔
+- 組員4：https://github.com/Pang-Yiyi/chatbot.git
+- 組員5：何平
