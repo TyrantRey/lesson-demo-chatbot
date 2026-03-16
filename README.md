@@ -73,13 +73,13 @@ GEMINI_API_KEY=your_api_key_here
 此外，我也了解如何將專案上傳到 GitHub，並學習遠端儲存庫與協作開發的概念。透過 GitHub，團隊成員可以共同管理程式碼，提升開發效率。
 
 同時，課程也讓我了解到資訊安全的重要性，例如 API key 應該放在 `.env` 檔案中，並透過 `.gitignore` 避免上傳到 GitHub。整體來說，這次的學習讓我更了解專案管理與協作開發的基本方式，對未來的程式開發很有幫助。
-
+劉嘉鎔 :透過這次的課程，我學習到如何結合AI模型與Grario等工具來產出專案，但也發現如果很多人同時編輯有可能會覆蓋別人寫好的程式碼
 
 ---
 
 ## GitHub 專案連結
 
 - 組員2：https://github.com/LUKEYAU/aiAgent.git
-- 組員3：劉嘉鎔 https://github.com/jessiliu0912-collab/0311.git
+- 組員3：https://github.com/jessiliu0912-collab/0311.git
 - 組員4：https://github.com/Pang-Yiyi/chatbot.git
 - 組員5：https://github.com/pann200011-byte/chatbot
